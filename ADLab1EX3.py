@@ -17,7 +17,7 @@ mean = np.mean(x_train)
 std = np.std(x_train)
 z_scores = (x_train-mean)/std
 
-threshold = np.quantile(np.abs(z_scores),0.9)
+threshold = np.quantile(np.abs(z_scores),1-contamination)
 y_train_pred = (np.abs(z_scores) > threshold).astype(int)
 
 balanced_acc = balanced_accuracy_score(y_train, y_train_pred)
