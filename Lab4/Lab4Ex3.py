@@ -28,17 +28,17 @@ rocauc_score = roc_auc_score(y_test,y_test_scores)
 print(balanced_accuracy)
 print(rocauc_score)
 
-# clf2_name = 'DeepSVDD'
-# clf2_architecture = ''
-# clf2 = DeepSVDD(n_features = 2, hidden_activation = 'gelu', use_ae = True)
-# clf2.fit(x_train)
-# y_train_pred2 = clf2.labels_
-# y_train_scores2 = clf2.decision_scores_ 
+clf2_name = 'DeepSVDD'
+clf2_architecture = ''
+clf2 = DeepSVDD(n_features = 2, hidden_activation = 'gelu', use_ae = True)
+clf2.fit(x_train)
+y_train_pred2 = clf2.labels_
+y_train_scores2 = clf2.decision_scores_ 
 
-# y_test_pred2 = clf2.predict(x_test)
-# y_test_scores2 = clf2.decision_function(x_test)
+y_test_pred2 = clf2.predict(x_test)
+y_test_scores2 = clf2.decision_function(x_test)
 
-# balanced_accuracy2 = balanced_accuracy_score(y_test, y_test_pred2)
-# rocauc_score2 = roc_auc_score(y_test,y_test_scores2)
-# print(balanced_accuracy2)
-# print(rocauc_score2)
+balanced_accuracy2 = balanced_accuracy_score(y_test, y_test_pred2)
+rocauc_score2 = roc_auc_score(y_test,y_test_scores2)
+print(balanced_accuracy2)
+print(rocauc_score2)
